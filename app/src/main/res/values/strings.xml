@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OpenClaw Car Companion</string>
+    <string name="connection_status">連線狀態</string>
+    <string name="statusconnected">未連線</string>
+    <string name="status_connecting">連線中...</string>
+    <string name="status_connected">已連線</string>
+    <string name="status_disconnected">未連線</string>
+    <string name="status_error">連線錯誤</string>
+    <string name="gps_enabled">GPS: 已啟用</string>
+    <string name="gps_disabled">GPS: 未啟用</string>
+    <string name="stop_tts">停止朗讀</string>
+    <string name="reconnect">重新連線</string>
+    <string name="settings">設定</string>
+    <string name="version_info">v1.0.0</string>
+</resources>
