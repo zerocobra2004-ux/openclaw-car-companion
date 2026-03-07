@@ -6,6 +6,9 @@ import com.google.gson.Gson
 import com.openclaw.carcompanion.models.*
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import okhttp3.*
 import java.util.concurrent.TimeUnit
 import kotlin.coroutines.resume
@@ -32,12 +35,16 @@ class WebSocketManager(
     private var pingJob: Job? = null
 
     // 訊息通道
-    private val _messages = Channel<WebSocketMessage>(Channel.BUFFERED)
-    val messages = _messages.receiveAsFlow()
+    private val _messages = MutableStateFlow<WebSocketMessage?>(null)
+    val messages: Flow<WebSocketMessage> = kotlinx.coroutines.flow.flow {
+        _messages.collect { msg ->
+            msg?.let { emit(it) }
+        }
+    }
 
     // 連線狀態
-    private val _connectionState = Channel<ConnectionState>(Channel.CONFLATED)
-    val connectionState = _connectionState.receiveAsFlow()
+    private val _connectionState = MutableStateFlow<ConnectionState>(ConnectionState.Disconnected)
+    val connectionState: Flow<ConnectionState> = _connectionState.asStateFlow()
 
     sealed class ConnectionState {
         object Connecting : ConnectionState()
@@ -56,7 +63,7 @@ class WebSocketManager(
             Log.d(TAG, "WebSocket connected")
             isConnected = true
             scope.launch {
-                _connectionState.send(ConnectionState.Connected)
+                _connectionState.value = ConnectionState.Connected
             }
             startPingJob()
         }
@@ -79,7 +86,7 @@ class WebSocketManager(
                 }
                 message?.let {
                     scope.launch {
-                        _messages.send(it)
+                        _messages.value = it
                     }
                 }
             } catch (e: Exception) {
@@ -97,7 +104,7 @@ class WebSocketManager(
             isConnected = false
             stopPingJob()
             scope.launch {
-                _connectionState.send(ConnectionState.Disconnected)
+                _connectionState.value = ConnectionState.Disconnected
             }
         }
 
@@ -106,7 +113,7 @@ class WebSocketManager(
             isConnected = false
             stopPingJob()
             scope.launch {
-                _connectionState.send(ConnectionState.Error(t.message ?: "Unknown error"))
+                _connectionState.value = ConnectionState.Error(t.message ?: "Unknown error")
             }
         }
     }
@@ -118,7 +125,7 @@ class WebSocketManager(
         }
 
         scope.launch {
-            _connectionState.send(ConnectionState.Connecting)
+            _connectionState.value = ConnectionState.Connecting
         }
 
         val url = "ws://$host:$port/ws/car"
