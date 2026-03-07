@@ -215,21 +215,21 @@ class CarCompanionService : Service() {
             serviceScope.launch {
                 connectionState.collect { state ->
                     when (state) {
-                        is WebSocketManager.ConnectionState.Connected -> {
+                        WebSocketManager.ConnectionState.Connected -> {
                             _connectionState.value = ConnectionState.Connected
                             updateNotification("已連線", true)
                             startLocationTracking()
                         }
-                        is WebSocketManager.ConnectionState.Disconnected -> {
+                        WebSocketManager.ConnectionState.Disconnected -> {
                             _connectionState.value = ConnectionState.Disconnected
                             updateNotification("已斷線", false)
                             stopLocationTracking()
                         }
-                        is WebSocketManager.ConnectionState.Error -> {
+                        WebSocketManager.ConnectionState.Error -> {
                             _connectionState.value = ConnectionState.Error
-                            updateNotification("錯誤: ${state.message}", false)
+                            updateNotification("連線錯誤", false)
                         }
-                        is WebSocketManager.ConnectionState.Connecting -> {
+                        WebSocketManager.ConnectionState.Connecting -> {
                             _connectionState.value = ConnectionState.Connecting
                         }
                     }
