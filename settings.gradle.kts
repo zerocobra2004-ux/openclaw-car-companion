@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "CarCompanion"
-include ':app'
+include(":app")
