@@ -23,7 +23,6 @@ jobs:
     
     - name: Build Debug APK
       run: |
-        cd car-companion
         chmod +x gradlew
         ./gradlew assembleDebug
     
@@ -31,13 +30,13 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: app-debug
-        path: car-companion/app/build/outputs/apk/debug/app-debug.apk
+        path: app/build/outputs/apk/debug/app-debug.apk
     
     - name: Create Release
       if: github.event_name == 'push'
       uses: softprops/action-gh-release@v1
       with:
-        files: car-companion/app/build/outputs/apk/debug/app-debug.apk
+        files: app/build/outputs/apk/debug/app-debug.apk
         body: 'OpenClaw Car Companion APK - Auto Built'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
