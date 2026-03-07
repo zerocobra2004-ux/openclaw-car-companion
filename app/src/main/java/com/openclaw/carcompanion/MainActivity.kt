@@ -191,8 +191,8 @@ class MainActivity : AppCompatActivity() {
                     binding.ivStatus.setImageResource(R.drawable.ic_status_disconnected)
                     binding.btnReconnect.isEnabled = true
                 }
-                is CarCompanionService.ConnectionState.Error -> {
-                    binding.tvStatus.text = "錯誤: ${state.message}"
+                CarCompanionService.ConnectionState.Error -> {
+                    binding.tvStatus.text = "錯誤"
                     binding.tvStatus.setTextColor(getColor(R.color.status_error))
                     binding.ivStatus.setImageResource(R.drawable.ic_status_error)
                     binding.btnReconnect.isEnabled = true

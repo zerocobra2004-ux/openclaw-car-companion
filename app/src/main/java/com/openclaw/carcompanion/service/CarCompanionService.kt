@@ -226,7 +226,7 @@ class CarCompanionService : Service() {
                             stopLocationTracking()
                         }
                         is WebSocketManager.ConnectionState.Error -> {
-                            _connectionState.value = ConnectionState.Error(state.message)
+                            _connectionState.value = ConnectionState.Error
                             updateNotification("錯誤: ${state.message}", false)
                         }
                         is WebSocketManager.ConnectionState.Connecting -> {
