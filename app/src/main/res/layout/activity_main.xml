@@ -1,140 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background"
-    android:padding="24dp">
-
-    <!-- 標題 -->
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="@color/text_primary"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
-
-    <!-- 狀態卡片 -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardStatus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp"
-        app:cardBackgroundColor="@color/card_background"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp"
-            android:gravity="center">
-
-            <!-- 連線狀態圖示 -->
-            <ImageView
-                android:id="@+id/ivStatus"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:src="@drawable/ic_status_disconnected"
-                android:contentDescription="@string/connection_status" />
-
-            <!-- 連線狀態文字 -->
-            <TextView
-                android:id="@+id/tvStatus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="@string/statusconnected"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/status_disconnected" />
-
-            <!-- GPS 狀態 -->
-            <TextView
-                android:id="@+id/tvGpsStatus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/gps_disabled"
-                android:textSize="14sp"
-                android:textColor="@color/text_secondary" />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <!-- 功能按鈕區 -->
-    <LinearLayout
-        android:id="@+id/layoutButtons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@id/cardStatus"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <!-- 停止 TTS -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnStopTts"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="@string/stop_tts"
-            android:textSize="16sp"
-            app:icon="@drawable/ic_stop"
-            app:iconGravity="textStart"
-            app:cornerRadius="12dp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
-
-        <!-- 重新連線 -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnReconnect"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="12dp"
-            android:text="@string/reconnect"
-            android:textSize="16sp"
-            app:icon="@drawable/ic_refresh"
-            app:iconGravity="textStart"
-            app:cornerRadius="12dp" />
-
-        <!-- 設定 -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSettings"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="12dp"
-            android:text="@string/settings"
-            android:textSize="16sp"
-            app:icon="@drawable/ic_settings"
-            app:iconGravity="textStart"
-            app:cornerRadius="12dp"
-            style="@style/Widget.MaterialComponents.Button.TextButton" />
-
-    </LinearLayout>
-
-    <!-- 版本資訊 -->
-    <TextView
-        android:id="@+id/tvVersion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/version_info"
-        android:textSize="12sp"
-        android:textColor="@color/text_hint"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="16dp" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+{
+  "name": "activity_main.xml",
+  "path": "app/src/main/res/layout/activity_main.xml",
+  "sha": "2b56686bda7d5cf6bfe5f43b94e0662fd9c88105",
+  "size": 5426,
+  "url": "https://api.github.com/repos/zerocobra2004-ux/openclaw-car-companion/contents/app/src/main/res/layout/activity_main.xml?ref=master",
+  "html_url": "https://github.com/zerocobra2004-ux/openclaw-car-companion/blob/master/app/src/main/res/layout/activity_main.xml",
+  "git_url": "https://api.github.com/repos/zerocobra2004-ux/openclaw-car-companion/git/blobs/2b56686bda7d5cf6bfe5f43b94e0662fd9c88105",
+  "download_url": "https://raw.githubusercontent.com/zerocobra2004-ux/openclaw-car-companion/master/app/src/main/res/layout/activity_main.xml",
+  "type": "file",
+  "content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGFuZHJv\naWR4LmNvbnN0cmFpbnRsYXlvdXQud2lkZ2V0LkNvbnN0cmFpbnRMYXlvdXQg\neG1sbnM6YW5kcm9pZD0iaHR0cDovL3NjaGVtYXMuYW5kcm9pZC5jb20vYXBr\nL3Jlcy9hbmRyb2lkIgogICAgeG1sbnM6YXBwPSJodHRwOi8vc2NoZW1hcy5h\nbmRyb2lkLmNvbS9hcGsvcmVzLWF1dG8iCiAgICB4bWxuczp0b29scz0iaHR0\ncDovL3NjaGVtYXMuYW5kcm9pZC5jb20vdG9vbHMiCiAgICBhbmRyb2lkOmxh\neW91dF93aWR0aD0ibWF0Y2hfcGFyZW50IgogICAgYW5kcm9pZDpsYXlvdXRf\naGVpZ2h0PSJtYXRjaF9wYXJlbnQiCiAgICBhbmRyb2lkOmJhY2tncm91bmQ9\nIkBjb2xvci9iYWNrZ3JvdW5kIgogICAgYW5kcm9pZDpwYWRkaW5nPSIyNGRw\nIj4KCiAgICA8IS0tIOaomemhjCAtLT4KICAgIDxUZXh0VmlldwogICAgICAg\nIGFuZHJvaWQ6aWQ9IkAraWQvdHZUaXRsZSIKICAgICAgICBhbmRyb2lkOmxh\neW91dF93aWR0aD0id3JhcF9jb250ZW50IgogICAgICAgIGFuZHJvaWQ6bGF5\nb3V0X2hlaWdodD0id3JhcF9jb250ZW50IgogICAgICAgIGFuZHJvaWQ6dGV4\ndD0iQHN0cmluZy9hcHBfbmFtZSIKICAgICAgICBhbmRyb2lkOnRleHRTaXpl\nPSIyOHNwIgogICAgICAgIGFuZHJvaWQ6dGV4dFN0eWxlPSJib2xkIgogICAg\nICAgIGFuZHJvaWQ6dGV4dENvbG9yPSJAY29sb3IvdGV4dF9wcmltYXJ5Igog\nICAgICAgIGFwcDpsYXlvdXRfY29uc3RyYWludFRvcF90b1RvcE9mPSJwYXJl\nbnQiCiAgICAgICAgYXBwOmxheW91dF9jb25zdHJhaW50U3RhcnRfdG9TdGFy\ndE9mPSJwYXJlbnQiCiAgICAgICAgYXBwOmxheW91dF9jb25zdHJhaW50RW5k\nX3RvRW5kT2Y9InBhcmVudCIKICAgICAgICBhbmRyb2lkOmxheW91dF9tYXJn\naW5Ub3A9IjE2ZHAiIC8+CgogICAgPCEtLSDni4DmhYvljaHniYcgLS0+CiAg\nICA8YW5kcm9pZHguY2FyZHZpZXcud2lkZ2V0LkNhcmRWaWV3CiAgICAgICAg\nYW5kcm9pZDppZD0iQCtpZC9jYXJkU3RhdHVzIgogICAgICAgIGFuZHJvaWQ6\nbGF5b3V0X3dpZHRoPSJtYXRjaF9wYXJlbnQiCiAgICAgICAgYW5kcm9pZDps\nYXlvdXRfaGVpZ2h0PSJ3cmFwX2NvbnRlbnQiCiAgICAgICAgYW5kcm9pZDps\nYXlvdXRfbWFyZ2luVG9wPSIzMmRwIgogICAgICAgIGFwcDpjYXJkQ29ybmVy\nUmFkaXVzPSIxNmRwIgogICAgICAgIGFwcDpjYXJkRWxldmF0aW9uPSI0ZHAi\nCiAgICAgICAgYXBwOmNhcmRCYWNrZ3JvdW5kQ29sb3I9IkBjb2xvci9jYXJk\nX2JhY2tncm91bmQiCiAgICAgICAgYXBwOmxheW91dF9jb25zdHJhaW50VG9w\nX3RvQm90dG9tT2Y9IkBpZC90dlRpdGxlIgogICAgICAgIGFwcDpsYXlvdXRf\nY29uc3RyYWludFN0YXJ0X3RvU3RhcnRPZj0icGFyZW50IgogICAgICAgIGFw\ncDpsYXlvdXRfY29uc3RyYWludEVuZF90b0VuZE9mPSJwYXJlbnQiPgoKICAg\nICAgICA8TGluZWFyTGF5b3V0CiAgICAgICAgICAgIGFuZHJvaWQ6bGF5b3V0\nX3dpZHRoPSJtYXRjaF9wYXJlbnQiCiAgICAgICAgICAgIGFuZHJvaWQ6bGF5\nb3V0X2hlaWdodD0id3JhcF9jb250ZW50IgogICAgICAgICAgICBhbmRyb2lk\nOm9yaWVudGF0aW9uPSJ2ZXJ0aWNhbCIKICAgICAgICAgICAgYW5kcm9pZDpw\nYWRkaW5nPSIyMGRwIgogICAgICAgICAgICBhbmRyb2lkOmdyYXZpdHk9ImNl\nbnRlciI+CgogICAgICAgICAgICA8IS0tIOmAo+e3mueLgOaFi+WcluekuiAt\nLT4KICAgICAgICAgICAgPEltYWdlVmlldwogICAgICAgICAgICAgICAgYW5k\ncm9pZDppZD0iQCtpZC9pdlN0YXR1cyIKICAgICAgICAgICAgICAgIGFuZHJv\naWQ6bGF5b3V0X3dpZHRoPSI2NGRwIgogICAgICAgICAgICAgICAgYW5kcm9p\nZDpsYXlvdXRfaGVpZ2h0PSI2NGRwIgogICAgICAgICAgICAgICAgYW5kcm9p\nZDpzcmM9IkBkcmF3YWJsZS9pY19zdGF0dXNfZGlzY29ubmVjdGVkIgogICAg\nICAgICAgICAgICAgYW5kcm9pZDpjb250ZW50RGVzY3JpcHRpb249IkBzdHJp\nbmcvY29ubmVjdGlvbl9zdGF0dXMiIC8+CgogICAgICAgICAgICA8IS0tIOmA\no+e3mueLgOaFi+aWh+WtlyAtLT4KICAgICAgICAgICAgPFRleHRWaWV3CiAg\nICAgICAgICAgICAgICBhbmRyb2lkOmlkPSJAK2lkL3R2U3RhdHVzIgogICAg\nICAgICAgICAgICAgYW5kcm9pZDpsYXlvdXRfd2lkdGg9IndyYXBfY29udGVu\ndCIKICAgICAgICAgICAgICAgIGFuZHJvaWQ6bGF5b3V0X2hlaWdodD0id3Jh\ncF9jb250ZW50IgogICAgICAgICAgICAgICAgYW5kcm9pZDpsYXlvdXRfbWFy\nZ2luVG9wPSIxMmRwIgogICAgICAgICAgICAgICAgYW5kcm9pZDp0ZXh0PSJA\nc3RyaW5nL3N0YXR1c2Nvbm5lY3RlZCIKICAgICAgICAgICAgICAgIGFuZHJv\naWQ6dGV4dFNpemU9IjIwc3AiCiAgICAgICAgICAgICAgICBhbmRyb2lkOnRl\neHRTdHlsZT0iYm9sZCIKICAgICAgICAgICAgICAgIGFuZHJvaWQ6dGV4dENv\nbG9yPSJAY29sb3Ivc3RhdHVzX2Rpc2Nvbm5lY3RlZCIgLz4KCiAgICAgICAg\nICAgIDwhLS0gR1BTIOeLgOaFiyAtLT4KICAgICAgICAgICAgPFRleHRWaWV3\nCiAgICAgICAgICAgICAgICBhbmRyb2lkOmlkPSJAK2lkL3R2R3BzU3RhdHVz\nIgogICAgICAgICAgICAgICAgYW5kcm9pZDpsYXlvdXRfd2lkdGg9IndyYXBf\nY29udGVudCIKICAgICAgICAgICAgICAgIGFuZHJvaWQ6bGF5b3V0X2hlaWdo\ndD0id3JhcF9jb250ZW50IgogICAgICAgICAgICAgICAgYW5kcm9pZDpsYXlv\ndXRfbWFyZ2luVG9wPSI4ZHAiCiAgICAgICAgICAgICAgICBhbmRyb2lkOnRl\neHQ9IkBzdHJpbmcvZ3BzX2Rpc2FibGVkIgogICAgICAgICAgICAgICAgYW5k\ncm9pZDp0ZXh0U2l6ZT0iMTRzcCIKICAgICAgICAgICAgICAgIGFuZHJvaWQ6\ndGV4dENvbG9yPSJAY29sb3IvdGV4dF9zZWNvbmRhcnkiIC8+CgogICAgICAg\nIDwvTGluZWFyTGF5b3V0PgoKICAgIDwvYW5kcm9pZHguY2FyZHZpZXcud2lk\nZ2V0LkNhcmRWaWV3PgoKICAgIDwhLS0g5Yqf6IO95oyJ6YiV5Y2AIC0tPgog\nICAgPExpbmVhckxheW91dAogICAgICAgIGFuZHJvaWQ6aWQ9IkAraWQvbGF5\nb3V0QnV0dG9ucyIKICAgICAgICBhbmRyb2lkOmxheW91dF93aWR0aD0ibWF0\nY2hfcGFyZW50IgogICAgICAgIGFuZHJvaWQ6bGF5b3V0X2hlaWdodD0id3Jh\ncF9jb250ZW50IgogICAgICAgIGFuZHJvaWQ6b3JpZW50YXRpb249InZlcnRp\nY2FsIgogICAgICAgIGFuZHJvaWQ6bGF5b3V0X21hcmdpblRvcD0iMzJkcCIK\nICAgICAgICBhcHA6bGF5b3V0X2NvbnN0cmFpbnRUb3BfdG9Cb3R0b21PZj0i\nQGlkL2NhcmRTdGF0dXMiCiAgICAgICAgYXBwOmxheW91dF9jb25zdHJhaW50\nU3RhcnRfdG9TdGFydE9mPSJwYXJlbnQiCiAgICAgICAgYXBwOmxheW91dF9j\nb25zdHJhaW50RW5kX3RvRW5kT2Y9InBhcmVudCI+CgogICAgICAgIDwhLS0g\n5YGc5q2iIFRUUyAtLT4KICAgICAgICA8Y29tLmdvb2dsZS5hbmRyb2lkLm1h\ndGVyaWFsLmJ1dHRvbi5NYXRlcmlhbEJ1dHRvbgogICAgICAgICAgICBhbmRy\nb2lkOmlkPSJAK2lkL2J0blN0b3BUdHMiCiAgICAgICAgICAgIGFuZHJvaWQ6\nbGF5b3V0X3dpZHRoPSJtYXRjaF9wYXJlbnQiCiAgICAgICAgICAgIGFuZHJv\naWQ6bGF5b3V0X2hlaWdodD0iNTZkcCIKICAgICAgICAgICAgYW5kcm9pZDp0\nZXh0PSJAc3RyaW5nL3N0b3BfdHRzIgogICAgICAgICAgICBhbmRyb2lkOnRl\neHRTaXplPSIxNnNwIgogICAgICAgICAgICBhcHA6aWNvbj0iQGRyYXdhYmxl\nL2ljX3N0b3AiCiAgICAgICAgICAgIGFwcDppY29uR3Jhdml0eT0idGV4dFN0\nYXJ0IgogICAgICAgICAgICBhcHA6Y29ybmVyUmFkaXVzPSIxMmRwIgogICAg\nICAgICAgICBzdHlsZT0iQHN0eWxlL1dpZGdldC5NYXRlcmlhbENvbXBvbmVu\ndHMuQnV0dG9uLk91dGxpbmVkQnV0dG9uIiAvPgoKICAgICAgICA8IS0tIOmH\njeaWsOmAo+e3miAtLT4KICAgICAgICA8Y29tLmdvb2dsZS5hbmRyb2lkLm1h\ndGVyaWFsLmJ1dHRvbi5NYXRlcmlhbEJ1dHRvbgogICAgICAgICAgICBhbmRy\nb2lkOmlkPSJAK2lkL2J0blJlY29ubmVjdCIKICAgICAgICAgICAgYW5kcm9p\nZDpsYXlvdXRfd2lkdGg9Im1hdGNoX3BhcmVudCIKICAgICAgICAgICAgYW5k\ncm9pZDpsYXlvdXRfaGVpZ2h0PSI1NmRwIgogICAgICAgICAgICBhbmRyb2lk\nOmxheW91dF9tYXJnaW5Ub3A9IjEyZHAiCiAgICAgICAgICAgIGFuZHJvaWQ6\ndGV4dD0iQHN0cmluZy9yZWNvbm5lY3QiCiAgICAgICAgICAgIGFuZHJvaWQ6\ndGV4dFNpemU9IjE2c3AiCiAgICAgICAgICAgIGFwcDppY29uPSJAZHJhd2Fi\nbGUvaWNfcmVmcmVzaCIKICAgICAgICAgICAgYXBwOmljb25HcmF2aXR5PSJ0\nZXh0U3RhcnQiCiAgICAgICAgICAgIGFwcDpjb3JuZXJSYWRpdXM9IjEyZHAi\nIC8+CgogICAgICAgIDwhLS0g6Kit5a6aIC0tPgogICAgICAgIDxjb20uZ29v\nZ2xlLmFuZHJvaWQubWF0ZXJpYWwuYnV0dG9uLk1hdGVyaWFsQnV0dG9uCiAg\nICAgICAgICAgIGFuZHJvaWQ6aWQ9IkAraWQvYnRuU2V0dGluZ3MiCiAgICAg\nICAgICAgIGFuZHJvaWQ6bGF5b3V0X3dpZHRoPSJtYXRjaF9wYXJlbnQiCiAg\nICAgICAgICAgIGFuZHJvaWQ6bGF5b3V0X2hlaWdodD0iNTZkcCIKICAgICAg\nICAgICAgYW5kcm9pZDpsYXlvdXRfbWFyZ2luVG9wPSIxMmRwIgogICAgICAg\nICAgICBhbmRyb2lkOnRleHQ9IkBzdHJpbmcvc2V0dGluZ3MiCiAgICAgICAg\nICAgIGFuZHJvaWQ6dGV4dFNpemU9IjE2c3AiCiAgICAgICAgICAgIGFwcDpp\nY29uPSJAZHJhd2FibGUvaWNfc2V0dGluZ3MiCiAgICAgICAgICAgIGFwcDpp\nY29uR3Jhdml0eT0idGV4dFN0YXJ0IgogICAgICAgICAgICBhcHA6Y29ybmVy\nUmFkaXVzPSIxMmRwIgogICAgICAgICAgICBzdHlsZT0iQHN0eWxlL1dpZGdl\ndC5NYXRlcmlhbENvbXBvbmVudHMuQnV0dG9uLlRleHRCdXR0b24iIC8+Cgog\nICAgPC9MaW5lYXJMYXlvdXQ+CgogICAgPCEtLSDniYjmnKzos4foqIogLS0+\nCiAgICA8VGV4dFZpZXcKICAgICAgICBhbmRyb2lkOmlkPSJAK2lkL3R2VmVy\nc2lvbiIKICAgICAgICBhbmRyb2lkOmxheW91dF93aWR0aD0id3JhcF9jb250\nZW50IgogICAgICAgIGFuZHJvaWQ6bGF5b3V0X2hlaWdodD0id3JhcF9jb250\nZW50IgogICAgICAgIGFuZHJvaWQ6dGV4dD0iQHN0cmluZy92ZXJzaW9uX2lu\nZm8iCiAgICAgICAgYW5kcm9pZDp0ZXh0U2l6ZT0iMTJzcCIKICAgICAgICBh\nbmRyb2lkOnRleHRDb2xvcj0iQGNvbG9yL3RleHRfaGludCIKICAgICAgICBh\ncHA6bGF5b3V0X2NvbnN0cmFpbnRCb3R0b21fdG9Cb3R0b21PZj0icGFyZW50\nIgogICAgICAgIGFwcDpsYXlvdXRfY29uc3RyYWludFN0YXJ0X3RvU3RhcnRP\nZj0icGFyZW50IgogICAgICAgIGFwcDpsYXlvdXRfY29uc3RyYWludEVuZF90\nb0VuZE9mPSJwYXJlbnQiCiAgICAgICAgYW5kcm9pZDpsYXlvdXRfbWFyZ2lu\nQm90dG9tPSIxNmRwIiAvPgoKPC9hbmRyb2lkeC5jb25zdHJhaW50bGF5b3V0\nLndpZGdldC5Db25zdHJhaW50TGF5b3V0Pgo=\n",
+  "encoding": "base64",
+  "_links": {
+    "self": "https://api.github.com/repos/zerocobra2004-ux/openclaw-car-companion/contents/app/src/main/res/layout/activity_main.xml?ref=master",
+    "git": "https://api.github.com/repos/zerocobra2004-ux/openclaw-car-companion/git/blobs/2b56686bda7d5cf6bfe5f43b94e0662fd9c88105",
+    "html": "https://github.com/zerocobra2004-ux/openclaw-car-companion/blob/master/app/src/main/res/layout/activity_main.xml"
+  }
+}
