@@ -97,6 +97,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupUI() {
         // 停止 TTS 按鈕
+        // Exit button - return to home
+        binding.btnExit.setOnClickListener {
+            moveTaskToBack(true)
+            finish()
+        }
+
         binding.btnStopTts.setOnClickListener {
             carService?.stopTts()
             Toast.makeText(this, "已停止朗讀", Toast.LENGTH_SHORT).show()
