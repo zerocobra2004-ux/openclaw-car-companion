@@ -46,8 +46,8 @@ class CarCompanionService : Service() {
         const val EXTRA_GATEWAY_PORT = "gateway_port"
         
         // 預設 Gateway
-        const val DEFAULT_HOST = "localhost"
-        const val DEFAULT_PORT = 8080
+        const val DEFAULT_HOST = "43.134.169.83"
+        const val DEFAULT_PORT = 18789
         
         // GPS 回傳間隔 (毫秒)
         const val LOCATION_REPORT_INTERVAL = 60000L // 60 秒
@@ -226,8 +226,8 @@ class CarCompanionService : Service() {
                             stopLocationTracking()
                         }
                         is WebSocketManager.ConnectionState.Error -> {
-                            _connectionState.value = ConnectionState.Error
-                            updateNotification("連線錯誤: ${state.message}", false)
+                            _connectionState.value = ConnectionState.Error(state.message)
+                            updateNotification("錯誤: ${state.message}", false)
                         }
                         is WebSocketManager.ConnectionState.Connecting -> {
                             _connectionState.value = ConnectionState.Connecting
