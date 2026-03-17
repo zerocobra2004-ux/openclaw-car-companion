@@ -22,9 +22,9 @@ jobs:
       run: chmod +x gradlew
     
     - name: Build with Gradle Wrapper
-      run: ./gradlew assembleDebug
+      run: ./gradlew assembleDebug --info 2>&1 | tail -100
     
-    - name: Upload APK
+    - name: Upload APK on success
       if: success()
       uses: actions/upload-artifact@v4
       with:
