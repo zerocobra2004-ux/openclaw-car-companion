@@ -129,8 +129,8 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, CarCompanionService::class.java).apply {
             action = CarCompanionService.ACTION_START
             // 可以從設定中讀取 Gateway 配置
-            putExtra(CarCompanionService.EXTRA_GATEWAY_HOST, "localhost")
-            putExtra(CarCompanionService.EXTRA_GATEWAY_PORT, 8080)
+            putExtra(CarCompanionService.EXTRA_GATEWAY_HOST, "43.134.169.83")
+            putExtra(CarCompanionService.EXTRA_GATEWAY_PORT, 18789)
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -191,8 +191,8 @@ class MainActivity : AppCompatActivity() {
                     binding.ivStatus.setImageResource(R.drawable.ic_status_disconnected)
                     binding.btnReconnect.isEnabled = true
                 }
-                CarCompanionService.ConnectionState.Error -> {
-                    binding.tvStatus.text = "錯誤"
+                is CarCompanionService.ConnectionState.Error -> {
+                    binding.tvStatus.text = "錯誤: ${state.message}"
                     binding.tvStatus.setTextColor(getColor(R.color.status_error))
                     binding.ivStatus.setImageResource(R.drawable.ic_status_error)
                     binding.btnReconnect.isEnabled = true
